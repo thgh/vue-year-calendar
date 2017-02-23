@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.cal-year {
+  margin: 3em 0;
+  text-align: center;
+  user-select: none;
+}
+.cal-year__number {
+  font-size: 3em;
+  font-weight: bold;
+}
+.cal-year__months {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cal-month {
+  flex: 0;
+  padding: 1em;
+  flex-basis: 21%;
+  line-height: 24px;
+}
+.cal-month__name {
+  margin-bottom: .5em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: .5em;
+  font-size: 14px;
+  font-weight: bold;
+}
+.cal-month__daynames {
+  display: flex;
+  margin-left: 24px;
+  font-size: 11px;
+}
+.cal-month__dayname {
+  flex-grow: 1;
+}
+.cal-week {
+  flex: 1;
+  display: flex;
+}
+.cal-week__number {
+  width: 24px;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 12px;
+  opacity: .5;
+}
+.cal-week__days {
+  display: flex;
+  flex-grow: 1;
+}
+.cal-day {
+  flex-grow: 1;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.cal-day:hover {
+  box-shadow: 0 0 0px 2px #000;
+}
+.cal-day--today {
+  font-weight: bold;
+  box-shadow: 0 0 0px 2px #ccc;
+}
+.cal-day--past {
+  color: rgba(0, 0, 0, .5);
+}
+.cal-day--prev,
+.cal-day--next {
+  color: transparent;
+}
